@@ -1,0 +1,403 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    color: inherit;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --main-color: #ffdd00;
+    --secundary-color: #000;
+    --third-color: #fff;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* screen - responsive from 250px */
+@media screen and (min-width: 250px) {
+
+    .container {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "h-line"
+        "section-1"
+        "section-2"
+        "section-3"
+        "button"
+        "footer"
+        "logo";
+        grid-gap: 5px;
+        grid-template-columns: auto;
+        /* TODO:grid-template-rows: 0.2fr 0.2fr 0.2fr repeat(5, 0.3fr); */
+        grid-template-rows: auto;
+        background-color: var(--main-color);
+        margin: 0 auto;
+        min-height: 100vh;
+        max-width: 90vw;
+    }
+
+    .header {
+        grid-area: header;
+        text-align: center;
+    }
+
+    .nav {
+        grid-area: nav;
+        text-align: center;
+    }
+
+    .text-section-1 {
+        grid-area: section-1;
+        place-self: center;
+    }
+
+    .text-section-2 {
+        grid-area: section-2;
+        place-self: center;
+    }
+
+    .text-section-3 {
+        grid-area: section-3;
+        place-self: center;
+    }
+
+    .footer {
+        grid-area: footer;
+        place-self: center;
+    }
+
+    /* logo top*/
+    .logo-top {
+        margin: 50px 0 20px 0;
+    }
+    
+    /* logo bottom */
+    .logo {
+        grid-area: logo;
+        place-self: center;
+    }
+    
+    .logo-bottom {
+        margin: 20px 0 50px 0;
+        width: 125px;
+    }
+
+    /* navigation link styles*/
+    .nav-list {
+        margin: 20px auto;
+    }
+    
+    .nav-item-1, .nav-item-2 {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 1rem;
+        text-align: center;
+        color: var(--secondary-color);
+        transition: color 300ms ease-in-out;
+        margin: 10px;
+    }
+
+    .nav-item-1:hover, .nav-item-2:hover {
+        color: var(--third-color);
+    }
+
+    .social-link:hover {
+        color: var(--third-color);
+    }
+
+    .social-link.active {
+        color: var(--secondary-color);
+    }
+
+    .social-item {
+        padding: 0.5rem;
+    }
+
+    /* separate styling elements */
+    .letter-spacing-1 {
+        letter-spacing: 0.3rem;
+    }
+
+    .letter-spacing-2 {
+        letter-spacing: 0.40rem;
+    }
+ 
+    /* text section styles */
+    .text-1 {
+        font-size: 2rem;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .text-2 {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .text-3 {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    /* horizontal line */
+    .h-line {
+        grid-area: h-line;
+        width: 90%;
+        height: 1px;
+        border: 0; 
+        border-top: 0.2rem solid #fff;
+        padding: 0;
+    }
+
+    /* email button */
+    .button {
+        grid-area: button;
+        place-self: center;
+    }
+
+    .button {
+        display: inline-block;
+        margin: 0 10px;
+        text-align: center;
+        border: 3px solid var(--third-color);
+        padding: 0.5rem 0.5rem;
+        font-size: 1rem;
+        color: var(--secundary-color);
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: var(--third-color);
+        color: var(--secundary-color);
+    }
+
+    /* general styles */
+    .padding-text {
+        padding: 0.5rem;
+    }
+
+    /* social links */
+    .social-list {
+        margin: 20px auto
+    }
+
+}
+
+/* screen - responsive from 768px*/
+@media screen and (min-width: 768px) {
+
+    .nav {
+        place-self: center;
+    }
+    
+    /* logo bottom */
+    .logo-bottom {
+        width: 150px;
+    }
+
+    /* text section styles */
+    .text-1 {
+        font-size: 2.5rem;
+    }
+
+    .text-2 {
+        font-size: 1.8rem;
+    }
+
+    .text-3 {
+        font-size: 1.6rem;
+    }
+
+    /* navigation */
+    .nav-item-1, .nav-tem-2 {
+        display: inline-block;
+    }
+
+    /* socials */
+    .social-list {
+        margin: 25px auto;
+    }
+
+    .social-item {
+        display: inline-block;
+    }
+
+    /* button */
+    button {
+        margin: 25px auto;
+    }
+    
+}
+
+/* screen - responsive from 1024px */
+@media screen and (min-width: 1024px) {
+
+    .container {
+        grid-template-areas: 
+        "header header nav"
+        "h-line h-line h-line"
+        "section-1 section-1 section-1"
+        "section-2 section-2 section-2"
+        "section-3 section-3 section-3"
+        "button button button"
+        "footer footer logo";
+        /* TODO:grid-template-rows: repeat(5, 0.2fr) 1fr; */
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header {
+        place-self: end start;
+    }
+
+    .nav {
+        place-self: end;
+    }
+
+    .footer {
+        place-self: end start;
+        margin: 0;
+    }
+
+    /* social links */
+    .social-list {
+        margin: 0;
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+
+    .social-item {
+        display: inline-block;
+    }
+
+    /* logo bottom */
+    .logo-bottom {
+        margin: 0;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+
+    .logo {
+        place-self: end;
+    }
+
+    /* logo top */
+    .logo-top {
+        margin: 0;
+        margin-top: 50px;
+        margin-left: 50px;
+        padding: 0;
+    }
+
+    /* navigation */
+    .nav-list {
+        display: inline-flex;
+        margin: 0;
+    }
+
+    .nav-item-1, .nav-item-2 {
+        margin: 0;
+        margin-right: 44px;        
+    }
+
+}
+
+/* screen - responsive from 1440px */
+@media screen and (min-width: 1440px) {
+
+    .container {
+        /* grid-template-rows: [h-line] 50px repeat(5, 1fr); */
+        max-width: 75vw;
+    }
+
+    /* text section styles */
+    .text-1 {
+        font-size: 4.5rem;
+    }
+
+    .text-2 {
+        font-size: 3rem;
+    }
+
+    .text-3 {
+        font-size: 2.5rem;
+    }
+
+    .nav-item-1, .nav-item-2 {
+        margin-right: 65px;
+    }
+
+    .logo-top {
+        margin-left: 65px;
+    }
+
+    .social-list {
+        margin: 0;
+        margin-left: 65px;
+        margin-bottom: 50px;
+    }
+
+    .logo-bottom {
+        margin: 0;
+        margin-right: 65px;
+        margin-bottom: 50px;
+    }
+
+    .h-line {
+        width: 95%;
+    }
+}
