@@ -1,0 +1,227 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  /* COLORS */
+  --main-color: #ffdd00;
+  --secundary-color: #000;
+  --third-color: #fff;
+  --ff-style: "Montserrat", sans-serif;
+  /* FONT WEIGHT */
+  /* TODO: CHECK FONT WEIGHT */
+  --ff-weight-light: 300;
+  --ff-weight-medium: 400;
+  --ff-weight-bold: 500;
+}
+
+html, body {
+  font-family: var(--ff-style);
+}
+
+/* screen - responsive from 250px */
+@media screen and (min-width: 250px) {
+  html {
+    position: relative;
+    background-color: var(--third-color);
+    height: 100%;
+  }
+
+  body {
+    position: relative;
+    background-color: var(--main-color);
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+  }
+
+  .header-logo {
+    display: block;
+  }
+
+  .container-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    border-top: 1px solid var(--third-color);
+  }
+  
+  .text-1 {
+    /* TODO: FONT SIZE */
+    inline-size: 100%;
+    overflow-wrap: break-word;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: var(--ff-weight-bold);
+    text-align: left;
+    margin: 2rem 0;
+    position: relative;
+  }
+
+  .text-2 {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: var(--ff-weight-medium);
+    text-align: left;
+    margin: 2rem 0;
+    position: relative;
+  }
+
+  .text-3 {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: var(--ff-weight-light);
+    text-align: left;
+    margin: 2rem 0;
+    position: relative;
+  }
+
+  .button {
+    display: inline-block;
+    margin: 1rem 1rem 1rem 0rem;
+    padding: 1rem 1rem 1rem 0rem;
+    border-color: var(--third-color);
+    border: 1px solid var(--third-color);
+    border-left: 0;
+    transition: color ease-in 1s;
+    font-weight: var(--ff-weight-bold);
+    width: fit-content;
+  }
+
+  .button:hover {
+    color: var(--third-color);
+    border-color: var(--secundary-color);
+  }
+
+  .footer {
+    margin-top: auto;
+    width: calc(100% - 40px);
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .social-list {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .social-item  {
+    display: inline-block;
+  }
+  
+  /* STYLE FONTAWESOME ICONS */
+  .fab {
+    font-size: 2rem;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    padding-right: .5rem;
+  }
+
+  /* HOVER EFFECT ICONS */
+  .fab:hover {
+    color: var(--third-color);
+  }
+
+  .social-link {
+    display: inline-block;
+    position: relative;
+    height: fit-content;
+  }
+
+  .footer-logo {
+    display: inline-block;
+    width: 150px;
+  }
+
+  .footer-logo img {
+    margin: 1rem 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .socials {
+    margin: 1rem 0;
+  }
+
+  .footer-text p {
+    font-size: 0.8rem;
+    margin: .2rem 0;
+  }
+
+}
+
+/* screen - responsive from 768px*/
+@media screen and (min-width: 768px) {
+
+}
+
+/* screen - responsive from 1024px */
+@media screen and (min-width: 1024px) {
+
+}
+
+
+/* screen - responsive from 1440px */
+@media screen and (min-width: 1440px) {
+   
+}
